@@ -1,6 +1,7 @@
 import React from "react";
+import Navigation from "./navigation";
 
-const Footer = ({ siteTitle, children }) => (
+const Footer = ({ siteTitle, children, links }) => (
   <footer>
     <div>{siteTitle}</div>
     <div>
@@ -9,16 +10,9 @@ const Footer = ({ siteTitle, children }) => (
         <li>+1-543-123-4567</li>
         <li>example@fylo.com</li>
       </ul>
-      <ul>
-        <li>About Us</li>
-        <li>Jobs</li>
-        <li>Press</li>
-        <li>Blog</li>
-        <li>Contact Us</li>
-        <li>Terms</li>
-        <li>Privacy</li>
-      </ul>
+      <Navigation links={links} />
     </div>
+    {children}
   </footer>
 );
 

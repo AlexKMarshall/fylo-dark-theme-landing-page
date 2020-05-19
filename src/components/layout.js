@@ -24,6 +24,10 @@ const Layout = ({ children }) => {
             link
             name
           }
+          secondaryLinks {
+            link
+            name
+          }
         }
       }
     }
@@ -36,7 +40,10 @@ const Layout = ({ children }) => {
       </Header>
       <div>
         <main>{children}</main>
-        <Footer siteTitle={data.site.siteMetadata.title}>
+        <Footer
+          siteTitle={data.site.siteMetadata.title}
+          links={data.site.siteMetadata.secondaryLinks}
+        >
           <p class="attribution">
             Challenge by{" "}
             <a href="https://www.frontendmentor.io?ref=challenge">

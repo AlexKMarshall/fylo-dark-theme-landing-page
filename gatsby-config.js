@@ -18,6 +18,36 @@ module.exports = {
         link: `/`,
       },
     ],
+    secondaryLinks: [
+      {
+        name: `About Us`,
+        link: `/`,
+      },
+      {
+        name: `Jobs`,
+        link: `/`,
+      },
+      {
+        name: `Press`,
+        link: `/`,
+      },
+      {
+        name: `Blog`,
+        link: `/`,
+      },
+      {
+        name: `Contact Us`,
+        link: `/`,
+      },
+      {
+        name: `Terms`,
+        link: `/`,
+      },
+      {
+        name: `Privacy`,
+        link: `/`,
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
