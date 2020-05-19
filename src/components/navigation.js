@@ -1,11 +1,14 @@
 import React from "react";
+import { Link } from "gatsby";
 
-const Navigation = () => (
+const Navigation = ({ links }) => (
   <nav>
     <ul>
-      <li>Features</li>
-      <li>Team</li>
-      <li>Sign In</li>
+      {links.map((link) => (
+        <li key={link.name}>
+          <Link to={link.link}>{link.name}</Link>
+        </li>
+      ))}
     </ul>
   </nav>
 );

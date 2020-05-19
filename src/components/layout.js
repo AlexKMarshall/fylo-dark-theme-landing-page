@@ -10,6 +10,7 @@ import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
 import Header from "./header";
+import Footer from "./footer";
 import "./layout.css";
 import Navigation from "./navigation";
 
@@ -19,6 +20,10 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          primaryLinks {
+            link
+            name
+          }
         }
       }
     }
@@ -27,11 +32,11 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title}>
-        <Navigation />
+        <Navigation links={data.site.siteMetadata.primaryLinks} />
       </Header>
       <div>
         <main>{children}</main>
-        <footer>
+        <Footer siteTitle={data.site.siteMetadata.title}>
           <p class="attribution">
             Challenge by{" "}
             <a href="https://www.frontendmentor.io?ref=challenge">
@@ -40,7 +45,7 @@ const Layout = ({ children }) => {
             . Coded by{" "}
             <a href="https://github.com/AlexKMarshall/">Alex Marshall</a>.
           </p>
-        </footer>
+        </Footer>
       </div>
     </>
   );

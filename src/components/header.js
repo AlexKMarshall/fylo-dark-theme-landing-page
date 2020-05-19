@@ -16,7 +16,7 @@ const Header = ({ siteTitle, children }) => (
         padding: `1.45rem 1.0875rem`,
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <div style={{ margin: 0 }}>
         <Link
           to="/"
           style={{
@@ -26,7 +26,7 @@ const Header = ({ siteTitle, children }) => (
         >
           {siteTitle}
         </Link>
-      </h1>
+      </div>
     </div>
     {children}
   </header>

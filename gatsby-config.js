@@ -4,6 +4,20 @@ module.exports = {
     description: `Fylo stores all your most important files in one secure location. Access them wherever 
   you need, share and collaborate with friends family, and co-workers.`,
     author: `@alexkmarshall1`,
+    primaryLinks: [
+      {
+        name: `Features`,
+        link: `/`,
+      },
+      {
+        name: `Team`,
+        link: `/`,
+      },
+      {
+        name: `Sign In`,
+        link: `/`,
+      },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
