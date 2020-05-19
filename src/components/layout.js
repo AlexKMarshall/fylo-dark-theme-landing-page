@@ -26,17 +26,15 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <Navigation />
+      <Header siteTitle={data.site.siteMetadata.title}>
+        <Navigation />
+      </Header>
       <div>
         <main>{children}</main>
         <footer>
           <p class="attribution">
             Challenge by{" "}
-            <a
-              href="https://www.frontendmentor.io?ref=challenge"
-              target="_blank"
-            >
+            <a href="https://www.frontendmentor.io?ref=challenge">
               Frontend Mentor
             </a>
             . Coded by{" "}
