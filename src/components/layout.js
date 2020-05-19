@@ -44,7 +44,7 @@ const Layout = ({ children }) => {
           siteTitle={data.site.siteMetadata.title}
           links={data.site.siteMetadata.secondaryLinks}
         >
-          <p class="attribution">
+          <p className="attribution">
             Challenge by{" "}
             <a href="https://www.frontendmentor.io?ref=challenge">
               Frontend Mentor
