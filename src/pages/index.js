@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "gatsby";
+import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 // import Image from "../components/image";
@@ -18,34 +18,70 @@ const IndexPage = () => (
 
     <ul>
       <li>
-        <header>Access your files, anywhere</header>
-        <section>
+        <h4>Access your files, anywhere</h4>
+        <p>
           The ability to use a smartphone, tablet, or computer to access your
           account means your files follow you everywhere.
-        </section>
+        </p>
       </li>
       <li>
-        <header>Security you can trust</header>
-        <section>
+        <h4>Security you can trust</h4>
+        <p>
           2-factor authentication and user-controlled encryption are just a
           couple of the security features we allow to help secure your files.
-        </section>
+        </p>
       </li>
       <li>
-        <header>Real-time collaboration</header>
-        <section>
+        <h4>Real-time collaboration</h4>
+        <p>
           Securely share files and folders with friends, family and colleagues
           for live collaboration. No email attachments required.
-        </section>
+        </p>
       </li>
       <li>
-        <header>Store any type of file</header>
-        <section>
+        <h4>Store any type of file</h4>
+        <p>
           Whether you're sharing holidays photos or work documents, Fylo has you
           covered allowing for all file types to be securely stored and shared.
-        </section>
+        </p>
       </li>
     </ul>
+
+    <h2>Stay productive, wherever you are</h2>
+    <p>
+      Never let location be an issue when accessing your files. Fylo has you
+      covered for all of your file storage needs.
+    </p>
+    <p>
+      Securely share files and folders with friends, family and colleagues for
+      live collaboration. No email attachments required.
+    </p>
+    <Link to={`/`}>See how Fylo works</Link>
+
+    <div>
+      <figure>
+        <blockquote>
+          Fylo has improved our team productivity by an order of magnitude.
+          Since making the switch our team has become a well-oiled collaboration
+          machine.
+        </blockquote>
+        <figcaption>
+          <h5>
+            <cite>Satish Patel</cite>
+          </h5>
+          Founder & CEO, Huddle
+        </figcaption>
+      </figure>
+    </div>
+
+    <h3>Get early access today</h3>
+    <p>
+      It only takes a minute to sign up and our free starter tier is extremely
+      generous. If you have any questions, our support team would be happy to
+      help you.
+    </p>
+    <input type="text" />
+    <button>Get Started For Free</button>
 
     {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
