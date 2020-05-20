@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
+import CallToAction from "./call-to-action";
 
 const StyledHeroSection = styled.section`
   max-width: 720px;
@@ -50,7 +51,7 @@ const HeroSection = () => (
       them wherever you need, share and collaborate with friends family, and
       co-workers.
     </p>
-    <button>Get Started</button>
+    <CallToAction>Get Started</CallToAction>
   </StyledHeroSection>
 );
 

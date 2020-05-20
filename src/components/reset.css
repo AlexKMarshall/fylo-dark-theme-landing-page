@@ -35,6 +35,11 @@ ol,
 ul {
   list-style: none;
 }
+
+button {
+  cursor: pointer;
+  font: inherit;
+}
 /* 
 img {
   max-width: 100%;
