@@ -1,5 +1,6 @@
 html,
 body {
+  padding: 70px;
   color: rgba(255, 255, 255, 90%);
   background: hsl(217, 28%, 15%);
   font-family: "Open Sans", sans-serif;

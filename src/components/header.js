@@ -2,9 +2,10 @@ import { Link } from "gatsby";
 import PropTypes from "prop-types";
 import React from "react";
 import Logo from "./logo";
+import headerStyles from "./header.module.css";
 
 const Header = ({ siteTitle, children }) => (
-  <header>
+  <header className={headerStyles.header}>
     <Link to="/">
       <Logo />
     </Link>
