@@ -7,6 +7,7 @@ import CallToAction from "./call-to-action";
 const StyledHeroSection = styled.section`
   max-width: 720px;
   margin: 0 auto;
+  padding-bottom: 160px;
   text-align: center;
   h1 {
     margin: 40px 0;
