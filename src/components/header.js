@@ -4,7 +4,7 @@ import React from "react";
 import Logo from "./logo";
 import headerStyles from "./header.module.css";
 
-const Header = ({ siteTitle, children }) => (
+const Header = ({ children }) => (
   <header className={headerStyles.header}>
     <Link to="/">
       <Logo />
