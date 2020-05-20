@@ -1,9 +1,10 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { Link } from "gatsby";
 
 import Layout from "../components/layout";
 // import Image from "../components/image";
 import SEO from "../components/seo";
+import Testimonials from "../components/testimonials";
 
 const IndexPage = ({ data }) => {
   console.log(data.allMarkdownRemark);
@@ -61,19 +62,7 @@ const IndexPage = ({ data }) => {
       </p>
       <Link to={`/`}>See how Fylo works</Link>
 
-      <div>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <figure key={node.id}>
-            <blockquote>{node.rawMarkdownBody}</blockquote>
-            <figcaption>
-              <h5>
-                <cite>{node.frontmatter.name}</cite>
-              </h5>
-              {`${node.frontmatter.position}, ${node.frontmatter.company}`}
-            </figcaption>
-          </figure>
-        ))}
-      </div>
+      <Testimonials />
 
       <h3>Get early access today</h3>
       <p>
@@ -92,21 +81,3 @@ const IndexPage = ({ data }) => {
 };
 
 export default IndexPage;
-
-export const query = graphql`
-  query {
-    allMarkdownRemark {
-      edges {
-        node {
-          id
-          rawMarkdownBody
-          frontmatter {
-            name
-            position
-            company
-          }
-        }
-      }
-    }
-  }
-`;
