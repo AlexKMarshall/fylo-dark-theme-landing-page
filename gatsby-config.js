@@ -65,6 +65,13 @@ module.exports = {
         path: `${__dirname}/content/testimonials`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `keyFeatures`,
+        path: `${__dirname}/content/key-features`,
+      },
+    },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

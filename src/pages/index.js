@@ -5,6 +5,7 @@ import Layout from "../components/layout";
 // import Image from "../components/image";
 import SEO from "../components/seo";
 import Testimonials from "../components/testimonials";
+import KeyFeatures from "../components/key-features";
 
 const IndexPage = ({ data }) => {
   return (
@@ -17,38 +18,7 @@ const IndexPage = ({ data }) => {
         co-workers.
       </p>
       <button>Get Started</button>
-
-      <ul>
-        <li>
-          <h4>Access your files, anywhere</h4>
-          <p>
-            The ability to use a smartphone, tablet, or computer to access your
-            account means your files follow you everywhere.
-          </p>
-        </li>
-        <li>
-          <h4>Security you can trust</h4>
-          <p>
-            2-factor authentication and user-controlled encryption are just a
-            couple of the security features we allow to help secure your files.
-          </p>
-        </li>
-        <li>
-          <h4>Real-time collaboration</h4>
-          <p>
-            Securely share files and folders with friends, family and colleagues
-            for live collaboration. No email attachments required.
-          </p>
-        </li>
-        <li>
-          <h4>Store any type of file</h4>
-          <p>
-            Whether you're sharing holidays photos or work documents, Fylo has
-            you covered allowing for all file types to be securely stored and
-            shared.
-          </p>
-        </li>
-      </ul>
+      <KeyFeatures />
 
       <h2>Stay productive, wherever you are</h2>
       <p>
