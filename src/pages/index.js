@@ -7,7 +7,6 @@ import SEO from "../components/seo";
 import Testimonials from "../components/testimonials";
 
 const IndexPage = ({ data }) => {
-  console.log(data.allMarkdownRemark);
   return (
     <Layout>
       <SEO title="Landing Page" />
