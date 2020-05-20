@@ -4,6 +4,11 @@ import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import CallToAction from "./call-to-action";
 
+const StyledHeroSectionWrapper = styled.div`
+  width: 100%;
+  background: hsl(217, 28%, 15%);
+`;
+
 const StyledHeroSection = styled.section`
   max-width: 720px;
   margin: 0 auto;
@@ -44,16 +49,18 @@ const HeroImage = () => {
 };
 
 const HeroSection = () => (
-  <StyledHeroSection>
-    <HeroImage />
-    <h1> All your files in one secure location, accessible anywhere.</h1>
-    <p>
-      Fylo stores all your most important files in one secure location. Access
-      them wherever you need, share and collaborate with friends family, and
-      co-workers.
-    </p>
-    <CallToAction>Get Started</CallToAction>
-  </StyledHeroSection>
+  <StyledHeroSectionWrapper>
+    <StyledHeroSection>
+      <HeroImage />
+      <h1> All your files in one secure location, accessible anywhere.</h1>
+      <p>
+        Fylo stores all your most important files in one secure location. Access
+        them wherever you need, share and collaborate with friends family, and
+        co-workers.
+      </p>
+      <CallToAction>Get Started</CallToAction>
+    </StyledHeroSection>
+  </StyledHeroSectionWrapper>
 );
 
 export default HeroSection;

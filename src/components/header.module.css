@@ -2,5 +2,6 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 70px;
+  padding: 70px;
+  background: hsl(217, 28%, 15%);
 }
