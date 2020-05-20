@@ -39,22 +39,20 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title}>
         <Navigation links={data.site.siteMetadata.primaryLinks} />
       </Header>
-      <div>
-        <main>{children}</main>
-        <Footer
-          siteTitle={data.site.siteMetadata.title}
-          links={data.site.siteMetadata.secondaryLinks}
-        >
-          <p className="attribution">
-            Challenge by{" "}
-            <a href="https://www.frontendmentor.io?ref=challenge">
-              Frontend Mentor
-            </a>
-            . Coded by{" "}
-            <a href="https://github.com/AlexKMarshall/">Alex Marshall</a>.
-          </p>
-        </Footer>
-      </div>
+      <main>{children}</main>
+      <Footer
+        siteTitle={data.site.siteMetadata.title}
+        links={data.site.siteMetadata.secondaryLinks}
+      >
+        <p className="attribution">
+          Challenge by{" "}
+          <a href="https://www.frontendmentor.io?ref=challenge">
+            Frontend Mentor
+          </a>
+          . Coded by{" "}
+          <a href="https://github.com/AlexKMarshall/">Alex Marshall</a>.
+        </p>
+      </Footer>
     </>
   );
 };

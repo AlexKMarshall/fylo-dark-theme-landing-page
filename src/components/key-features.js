@@ -14,6 +14,7 @@ const KeyFeatures = () => {
             title
           }
           id
+          html
         }
       }
     }
@@ -22,9 +23,9 @@ const KeyFeatures = () => {
   return (
     <ul>
       {data.allMarkdownRemark.nodes.map((node) => (
-        <li key={node.id}>
-          <h4>{node.frontmatter.title}</h4>
-          <p>{node.rawMarkdownBody}</p>
+        <li key={node.id} dangerouslySetInnerHTML={{ __html: node.html }}>
+          {/* <h4>{node.frontmatter.title}</h4>
+          <p>{node.rawMarkdownBody}</p> */}
         </li>
       ))}
     </ul>
