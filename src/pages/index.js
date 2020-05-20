@@ -12,6 +12,18 @@ import KeyFeatures from "../components/key-features";
 const HeroSection = styled.section`
   max-width: 720px;
   margin: 0 auto;
+  text-align: center;
+  h1 {
+    margin: 40px 0;
+    font-weight: 700;
+  }
+  p {
+    font-size: 20px;
+    line-height: 1.5em;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
 `;
 
 const IndexPage = ({ data }) => {
