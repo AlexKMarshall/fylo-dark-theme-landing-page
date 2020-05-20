@@ -19,8 +19,6 @@ const KeyFeatures = () => {
     }
   `);
 
-  console.log(data);
-
   return (
     <ul>
       {data.allMarkdownRemark.nodes.map((node) => (
