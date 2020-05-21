@@ -2,6 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import styled from "styled-components";
 import Img from "gatsby-image";
+import bgQuotes from "./../images/bg-quotes.png";
 
 const StyledTestimonials = styled.div`
   margin: 0 70px;
@@ -12,6 +13,20 @@ const StyledTestimonials = styled.div`
     padding: 45px 25px 25px 25px;
     border-radius: 10px;
     background: hsl(219, 30%, 18%);
+    position: relative;
+    z-index: 2;
+
+    &:first-child::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 55px;
+      height: 45px;
+      content: " ";
+      transform: translate(-8px, -37px);
+      background-image: url(${bgQuotes});
+      z-index: 1;
+    }
   }
 
   blockquote {
