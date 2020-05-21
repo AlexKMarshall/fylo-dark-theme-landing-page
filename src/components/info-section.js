@@ -3,6 +3,7 @@ import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import styled from "styled-components";
+import iconArrow from "./../images/icon-arrow.svg";
 
 const StyledInfoSection = styled.div`
   margin: 0 70px;
@@ -21,6 +22,20 @@ const StyledInfoSection = styled.div`
     font-size: 16px;
     line-height: 1.5em;
     margin-bottom: 1em;
+  }
+`;
+
+const StyledLink = styled(Link)`
+  color: #62e0d9;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #62e0d9;
+  font-size: 16px;
+
+  &:visited {
+    color: #62e0d9;
+  }
+  &:hover {
+    color: #62e0d9;
   }
 `;
 
@@ -60,7 +75,14 @@ const InfoSection = () => (
         Securely share files and folders with friends, family and colleagues for
         live collaboration. No email attachments required.
       </p>
-      <Link to={`/`}>See how Fylo works</Link>
+      <StyledLink to={`/`}>
+        See how Fylo works{" "}
+        <img
+          src={iconArrow}
+          alt="Right arrow icon"
+          css={{ verticalAlign: "middle" }}
+        />
+      </StyledLink>
     </section>
   </StyledInfoSection>
 );
