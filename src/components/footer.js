@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { FaFacebookF, FaTwitter, FaInstagram } from "react-icons/fa";
+
 import Navigation from "./navigation";
 import Logo from "./logo";
 
@@ -75,6 +77,23 @@ const StyledFooterNav = styled(Navigation)`
   }
 `;
 
+const StyledSocialIcons = styled.ul`
+  display: flex;
+  & > li {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & > li:not(:first-child) {
+    margin-left: 12px;
+  }
+`;
+
 const Footer = ({ children, links }) => (
   <StyledFooterWrapper>
     <Logo style={{ marginBottom: `35px` }} />
@@ -90,9 +109,19 @@ const Footer = ({ children, links }) => (
         <li>example@fylo.com</li>
       </StyledContacts>
 
-      <div>
-        <StyledFooterNav links={links} />
-      </div>
+      <StyledFooterNav links={links} />
+
+      <StyledSocialIcons>
+        <li>
+          <FaFacebookF />
+        </li>
+        <li>
+          <FaTwitter />
+        </li>
+        <li>
+          <FaInstagram />
+        </li>
+      </StyledSocialIcons>
     </StyledFooter>
     {/* {children} */}
   </StyledFooterWrapper>
