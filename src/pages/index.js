@@ -6,6 +6,7 @@ import HeroSection from "../components/hero-section";
 import SEO from "../components/seo";
 import Testimonials from "../components/testimonials";
 import KeyFeatures from "../components/key-features";
+import InfoSection from "../components/info-section";
 
 const IndexPage = ({ data }) => {
   return (
@@ -14,17 +15,7 @@ const IndexPage = ({ data }) => {
 
       <HeroSection />
       <KeyFeatures />
-
-      <h2>Stay productive, wherever you are</h2>
-      <p>
-        Never let location be an issue when accessing your files. Fylo has you
-        covered for all of your file storage needs.
-      </p>
-      <p>
-        Securely share files and folders with friends, family and colleagues for
-        live collaboration. No email attachments required.
-      </p>
-      <Link to={`/`}>See how Fylo works</Link>
+      <InfoSection />
 
       <Testimonials />
 
