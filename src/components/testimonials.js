@@ -16,14 +16,36 @@ const StyledTestimonials = styled.div`
 
   blockquote {
     margin: 0;
+    margin-bottom: 20px;
+    letter-spacing: 0.03em;
+  }
+
+  figcaption {
+    display: flex;
+    align-items: flex-end;
   }
 `;
 
-const Avatar = styled.div`
+const ProfilePicture = styled.div`
   width: 25px;
   height: 25px;
   border-radius: 50%;
   overflow: hidden;
+`;
+
+const Author = styled.div`
+  margin-left: 7px;
+  font-size: 8px;
+  line-height: 1em;
+
+  cite {
+    display: block;
+    font-family: Raleway, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
 `;
 
 const Testimonials = () => {
@@ -31,6 +53,7 @@ const Testimonials = () => {
     query testimonials {
       allMarkdownRemark(
         filter: { fileAbsolutePath: { regex: "/testimonials/" } }
+        sort: { fields: fileAbsolutePath }
       ) {
         edges {
           node {
@@ -60,13 +83,13 @@ const Testimonials = () => {
         <figure key={node.id}>
           <blockquote>{node.rawMarkdownBody}</blockquote>
           <figcaption>
-            <h5>
-              <cite>{node.frontmatter.name}</cite>
-            </h5>
-            {`${node.frontmatter.position}, ${node.frontmatter.company}`}
-            <Avatar>
+            <ProfilePicture>
               <Img fluid={node.frontmatter.picture.childImageSharp.fluid} />
-            </Avatar>
+            </ProfilePicture>
+            <Author>
+              <cite>{node.frontmatter.name}</cite>
+              {`${node.frontmatter.position}, ${node.frontmatter.company}`}
+            </Author>
           </figcaption>
         </figure>
       ))}
