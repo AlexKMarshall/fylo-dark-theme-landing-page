@@ -2,6 +2,27 @@ import React from "react";
 import { Link } from "gatsby";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
+import styled from "styled-components";
+
+const StyledInfoSection = styled.div`
+  margin: 0 70px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 40px;
+  align-items: center;
+  h2 {
+    font-size: 40px;
+    line-height: 1.25em;
+    letter-spacing: 0.01em;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+  }
+`;
 
 const Illustration = () => {
   const data = useStaticQuery(graphql`
@@ -27,7 +48,7 @@ const Illustration = () => {
 };
 
 const InfoSection = () => (
-  <div>
+  <StyledInfoSection>
     <Illustration />
     <section>
       <h2>Stay productive, wherever you are</h2>
@@ -41,7 +62,7 @@ const InfoSection = () => (
       </p>
       <Link to={`/`}>See how Fylo works</Link>
     </section>
-  </div>
+  </StyledInfoSection>
 );
 
 export default InfoSection;
