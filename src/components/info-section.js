@@ -6,7 +6,7 @@ import styled from "styled-components";
 import iconArrow from "./../images/icon-arrow.svg";
 
 const StyledInfoSection = styled.div`
-  margin: 0 70px;
+  margin: 0 70px 170px 70px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 40px;
