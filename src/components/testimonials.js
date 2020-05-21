@@ -1,5 +1,30 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import styled from "styled-components";
+import Img from "gatsby-image";
+
+const StyledTestimonials = styled.div`
+  margin: 0 70px;
+  display: flex;
+  justify-content: space-between;
+
+  figure {
+    padding: 45px 25px 25px 25px;
+    border-radius: 10px;
+    background: hsl(219, 30%, 18%);
+  }
+
+  blockquote {
+    margin: 0;
+  }
+`;
+
+const Avatar = styled.div`
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  overflow: hidden;
+`;
 
 const Testimonials = () => {
   const data = useStaticQuery(graphql`
@@ -15,6 +40,13 @@ const Testimonials = () => {
               name
               position
               company
+              picture {
+                childImageSharp {
+                  fluid(maxWidth: 24) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
           }
         }
@@ -23,7 +55,7 @@ const Testimonials = () => {
   `);
 
   return (
-    <div>
+    <StyledTestimonials>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <figure key={node.id}>
           <blockquote>{node.rawMarkdownBody}</blockquote>
@@ -32,10 +64,13 @@ const Testimonials = () => {
               <cite>{node.frontmatter.name}</cite>
             </h5>
             {`${node.frontmatter.position}, ${node.frontmatter.company}`}
+            <Avatar>
+              <Img fluid={node.frontmatter.picture.childImageSharp.fluid} />
+            </Avatar>
           </figcaption>
         </figure>
       ))}
-    </div>
+    </StyledTestimonials>
   );
 };
 

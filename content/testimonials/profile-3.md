@@ -1,7 +1,8 @@
 ---
-name: Bruce McKenzie
+name: Iva Boyd
 position: Founder & CEO
 company: Huddle
+picture: profile-3.jpg
 ---
 
 Fylo has improved our team productivity by an order of magnitude.
