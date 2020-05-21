@@ -9,10 +9,12 @@ import iconEmail from "./../images/icon-email.svg";
 
 const StyledFooterWrapper = styled.footer`
   margin-left: 110px;
+  margin-right: 70px;
 `;
 
 const StyledFooter = styled.div`
   display: flex;
+  justify-content: space-between;
   font-size: 16px;
   letter-spacing: 0.05em;
   line-height: 1.5em;
@@ -63,6 +65,16 @@ const StyledContacts = styled.ul`
   }
 `;
 
+const StyledFooterNav = styled(Navigation)`
+  ul {
+    display: grid;
+    grid-template-rows: repeat(4, 40px);
+    grid-auto-flow: column;
+    grid-auto-columns: auto;
+    column-gap: 75px;
+  }
+`;
+
 const Footer = ({ children, links }) => (
   <StyledFooterWrapper>
     <Logo style={{ marginBottom: `35px` }} />
@@ -79,7 +91,7 @@ const Footer = ({ children, links }) => (
       </StyledContacts>
 
       <div>
-        <Navigation links={links} />
+        <StyledFooterNav links={links} />
       </div>
     </StyledFooter>
     {/* {children} */}
