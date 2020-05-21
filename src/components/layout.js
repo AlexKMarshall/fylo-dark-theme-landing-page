@@ -8,12 +8,27 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
+import styled from "styled-components";
 
 import Header from "./header";
 import Footer from "./footer";
 import "./reset.css";
 import "./layout.css";
 import Navigation from "./navigation";
+
+const StyledMainNav = styled(Navigation)`
+  font-size: 16px;
+  ul {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  ul > li {
+    margin-left: 55px;
+  }
+`;
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -37,7 +52,7 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title}>
-        <Navigation links={data.site.siteMetadata.primaryLinks} />
+        <StyledMainNav links={data.site.siteMetadata.primaryLinks} />
       </Header>
       <main>{children}</main>
       <Footer links={data.site.siteMetadata.secondaryLinks}>
