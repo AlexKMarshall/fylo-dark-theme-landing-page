@@ -8,6 +8,7 @@ const StyledSignUp = styled.section`
   border-radius: 10px;
   background: hsl(217, 28%, 15%);
   padding: 55px 70px 35px;
+  margin-bottom: 110px;
   text-align: center;
   box-shadow: 10px 10px 10px hsla(217, 28%, 5%, 50%);
 
