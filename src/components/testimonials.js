@@ -51,7 +51,7 @@ const ProfilePicture = styled.div`
 const Author = styled.div`
   margin-left: 7px;
   font-size: 8px;
-  line-height: 1em;
+  line-height: 1.5em;
 
   cite {
     display: block;
@@ -59,7 +59,7 @@ const Author = styled.div`
     font-size: 12px;
     font-style: normal;
     font-weight: 700;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
   }
 `;
 
