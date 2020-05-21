@@ -40,10 +40,7 @@ const Layout = ({ children }) => {
         <Navigation links={data.site.siteMetadata.primaryLinks} />
       </Header>
       <main>{children}</main>
-      <Footer
-        siteTitle={data.site.siteMetadata.title}
-        links={data.site.siteMetadata.secondaryLinks}
-      >
+      <Footer links={data.site.siteMetadata.secondaryLinks}>
         <p className="attribution">
           Challenge by{" "}
           <a href="https://www.frontendmentor.io?ref=challenge">

@@ -1,9 +1,10 @@
 import React from "react";
 import Navigation from "./navigation";
+import Logo from "./logo";
 
-const Footer = ({ siteTitle, children, links }) => (
+const Footer = ({ children, links }) => (
   <footer>
-    <div>{siteTitle}</div>
+    <Logo />
     <div>
       <ul>
         <li>Address</li>
