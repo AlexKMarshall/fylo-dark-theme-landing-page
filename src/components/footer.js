@@ -4,44 +4,86 @@ import Navigation from "./navigation";
 import Logo from "./logo";
 
 import iconLocation from "./../images/icon-location.svg";
+import iconPhone from "./../images/icon-phone.svg";
+import iconEmail from "./../images/icon-email.svg";
 
-const StyledFooter = styled.footer`
+const StyledFooterWrapper = styled.footer`
   margin-left: 110px;
 `;
 
+const StyledFooter = styled.div`
+  display: flex;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  line-height: 1.5em;
+`;
+
 const StyledAddress = styled.ol`
-  margin-left: 30px;
+  margin-left: 40px;
   position: relative;
 
   &::before {
     content: " ";
     position: absolute;
     top: 5px;
-    left: -30px;
+    left: -40px;
     width: 13px;
     height: 18px;
     background-image: url(${iconLocation});
   }
 `;
 
+const StyledContacts = styled.ul`
+  display: grid;
+  grid-template-rows: 40px 40px;
+
+  li {
+    margin-left: 40px;
+    position: relative;
+
+    &:first-child::before {
+      position: absolute;
+      content: " ";
+      width: 18px;
+      height: 18px;
+      top: 3px;
+      left: -40px;
+      background-image: url(${iconPhone});
+    }
+
+    &:last-child::before {
+      position: absolute;
+      content: " ";
+      width: 20px;
+      height: 16px;
+      top: 4px;
+      left: -40px;
+      background-image: url(${iconEmail});
+    }
+  }
+`;
+
 const Footer = ({ children, links }) => (
-  <StyledFooter>
+  <StyledFooterWrapper>
     <Logo style={{ marginBottom: `35px` }} />
-    <StyledAddress>
-      <li>14 Tottenham Court Road </li>
-      <li>London</li>
-      <li>England</li>
-      <li>W1T 1JY</li>
-    </StyledAddress>
-    <div>
-      <ul>
+    <StyledFooter>
+      <StyledAddress>
+        <li>14 Tottenham Court Road </li>
+        <li>London</li>
+        <li>England</li>
+        <li>W1T 1JY</li>
+      </StyledAddress>
+      <StyledContacts>
         <li>+1-543-123-4567</li>
         <li>example@fylo.com</li>
-      </ul>
-      <Navigation links={links} />
-    </div>
-    {children}
-  </StyledFooter>
+      </StyledContacts>
+
+      <div>
+        <Navigation links={links} />
+      </div>
+    </StyledFooter>
+    {/* {children} */}
+  </StyledFooterWrapper>
 );
 
 export default Footer;
