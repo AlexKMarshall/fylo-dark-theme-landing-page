@@ -5,7 +5,7 @@ import Img from "gatsby-image";
 import bgQuotes from "./../images/bg-quotes.png";
 
 const StyledTestimonials = styled.div`
-  margin: 0 70px;
+  margin: 0 70px 190px 70px;
   display: flex;
   justify-content: space-between;
 

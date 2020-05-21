@@ -58,7 +58,7 @@ const HeroSection = () => (
         them wherever you need, share and collaborate with friends family, and
         co-workers.
       </p>
-      <CallToAction>Get Started</CallToAction>
+      <CallToAction width="280">Get Started</CallToAction>
     </StyledHeroSection>
   </StyledHeroSectionWrapper>
 );

@@ -6,6 +6,7 @@ import SEO from "../components/seo";
 import Testimonials from "../components/testimonials";
 import KeyFeatures from "../components/key-features";
 import InfoSection from "../components/info-section";
+import SignUp from "../components/sign-up";
 
 const IndexPage = ({ data }) => {
   return (
@@ -18,14 +19,7 @@ const IndexPage = ({ data }) => {
 
       <Testimonials />
 
-      <h3>Get early access today</h3>
-      <p>
-        It only takes a minute to sign up and our free starter tier is extremely
-        generous. If you have any questions, our support team would be happy to
-        help you.
-      </p>
-      <input type="text" />
-      <button>Get Started For Free</button>
+      <SignUp />
 
       {/* <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
