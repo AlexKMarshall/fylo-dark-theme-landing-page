@@ -3,10 +3,14 @@ import styled from "styled-components";
 import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 import CallToAction from "./call-to-action";
+import bgCurvyDesktop from "./../images/bg-curvy-desktop.svg";
 
 const StyledHeroSectionWrapper = styled.div`
   width: 100%;
   background: hsl(217, 28%, 15%);
+  background-image: url(${bgCurvyDesktop});
+  background-repeat: no-repeat;
+  background-position: center bottom;
 `;
 
 const StyledHeroSection = styled.section`
